@@ -4,9 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .banner {
+            background-color: #4CAF50;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            font-size: 36px;
+        }
+
+        .banner h1 {
+            margin: 0;
+            font-size: 50px;
+        }
+
+        .banner p {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello <%= user.name %></h1>
+    <div class="nav"><button style="background-color: #ff0e0e; color: white; padding: 8px 16px; text-align: center; font-size: 16px; border: none; border-radius: 4px; cursor: pointer; margin-top: 10px;">
+        <a href="/logout" style="color: inherit;">Logout</a>
+      </button></div>
+      <div class="banner">
+        <h1>Welcome to Our Website <span style="color: black; text-shadow: white;"> <%= user.name %> </span></h1>
+        <p>We're glad you're here!</p>
+    </div>
 </body>
 </html>
